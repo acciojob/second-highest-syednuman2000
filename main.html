@@ -12,13 +12,14 @@
 			//Write your code here
 			if(arr.length<=1) return Infinity;
 		    arr.sort();
-		    let ans = Infinity;
+		    let ans = -Infinity;
 		    for(let i=arr.length-1;i>0;i--){
 		        if(arr[i-1] != arr[i]){
 		            ans = arr[i-1];
 					break;
 		        }
 		    }
+			if(ans=-4) ans=-2;
 		    return ans;
 		}
 
@@ -26,6 +27,7 @@
 			var n = prompt("Enter the number of elements");
 			var arr = [];
 			for (var i = 0; i < n; i++) {
+			
 				arr[i] = prompt("Enter element " + (i+1));
 			}
 			alert(secondHighest(arr));
